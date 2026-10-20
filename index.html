@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d1b">
+<title>MS AURA TOP UP | Free Fire Diamonds</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080d1b;color:#fff;
+font-family:Arial,sans-serif}
+header{padding:24px 16px;text-align:center;
+background:linear-gradient(135deg,#101c40,#182d5d);
+border-bottom:2px solid #35d7ff}
+.logo{font-size:27px;font-weight:900;color:#55e2ff}
+header p{color:#d0dcf8;font-size:13px}
+main{max-width:850px;margin:auto;padding:20px 14px}
+.hero{text-align:center;padding:20px 5px}
+.hero h1{font-size:30px;margin:8px 0;color:#fff}
+.hero p{color:#aebcda}
+h2{font-size:20px;color:#66e5ff}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:#111a30;border:1px solid #293957;
+border-radius:14px;padding:17px 10px;text-align:center}
+.card .diamond{font-size:28px}
+.card h3{margin:8px 0}
+.price{color:#65e7ff;font-weight:bold;font-size:20px}
+button{border:0;border-radius:9px;padding:12px;
+background:#36d6f5;color:#07111e;font-weight:bold;
+cursor:pointer;width:100%;margin-top:10px}
+.card.selected{border:2px solid #50e8ff}
+.panel{margin-top:24px;padding:18px;background:#111a30;
+border:1px solid #293957;border-radius:14px}
+label{display:block;margin:13px 0 6px;color:#dce6ff}
+input,select{width:100%;padding:13px;border-radius:8px;
+border:1px solid #394968;background:#080f20;color:white;
+font-size:16px}
+.note{font-size:13px;color:#b7c6e5;line-height:1.7}
+.result{white-space:pre-wrap;overflow-wrap:anywhere;
+background:#071020;padding:14px;border-radius:8px;margin-top:12px}
+footer{text-align:center;padding:25px;color:#9aa9c9;font-size:12px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">MS AURA TOP UP</div>
+  <p>YOUR DIAMOND SHOP</p>
+</header>
+<main>
+  <section class="hero">
+    <div style="font-size:45px">💎</div>
+    <h1>Free Fire Diamond Top-Up</h1>
+    <p>প্যাকেজ বেছে নিন, Player UID দিন এবং অর্ডার করুন।</p>
+  </section>
+
+  <h2>💎 Diamond Packages</h2>
+  <p class="note">নিচের দামগুলো নমুনা। বিক্রি শুরু করার আগে
+  নিজের সঠিক দাম বসান।</p>
+  <div class="grid" id="packages"></div>
+
+  <section class="panel">
+    <h2>🛒 অর্ডার করুন</h2>
+    <form id="orderForm">
+      <label for="uid">Free Fire Player UID</label>
+      <input id="uid" required inputmode="numeric"
+      pattern="[0-9]{5,20}" placeholder="আপনার Player UID">
+
+      <label for="player">Player Name (ঐচ্ছিক)</label>
+      <input id="player" placeholder="গেমের নাম">
+
+      <label for="contact">যোগাযোগের নম্বর</label>
+      <input id="contact" required type="tel"
+      placeholder="01XXXXXXXXX">
+
+      <label for="payment">পেমেন্ট পদ্ধতি</label>
+      <select id="payment" required>
+        <option value="">নির্বাচন করুন</option>
+        <option>bKash</option>
+        <option>Nagad</option>
+      </select>
+
+      <label for="trx">Transaction ID</label>
+      <input id="trx" required placeholder="পেমেন্টের TrxID">
+
+      <p class="note">পেমেন্ট করার আগে দোকানের মালিকের
+      নিশ্চিত করা নম্বর নিন। ভুল নম্বরে টাকা পাঠাবেন না।
+      এই ডেমো সাইটে কোনো বাস্তব পেমেন্ট নেওয়া হয় না।</p>
+      <button type="submit">অর্ডারের বিবরণ তৈরি করুন</button>
+    </form>
+    <div id="result" hidden>
+      <h2>অর্ডারের বিবরণ</h2>
+      <div class="result" id="details"></div>
+      <button type="button" id="copyBtn">বিবরণ কপি করুন</button>
+      <p class="note">এটি শুধু আপনার ফোনের স্ক্রিনে তৈরি হবে।
+      অর্ডার সার্ভারে জমা হয়নি এবং পেমেন্ট যাচাই হয়নি।
+      ডায়মন্ড দেওয়ার আগে নিজে পেমেন্ট যাচাই করুন।</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>📌 কীভাবে অর্ডার করবেন?</h2>
+    <p class="note">
+      ১. ডায়মন্ড প্যাকেজ নির্বাচন করুন।<br>
+      ২. Player UID ও যোগাযোগের তথ্য দিন।<br>
+      ৩. দোকানের নিশ্চিত পেমেন্ট নির্দেশনা অনুসরণ করুন।<br>
+      ৪. পেমেন্ট যাচাইয়ের পর অর্ডার সম্পন্ন করুন।
+      <br><br>
+      আপনার Free Fire পাসওয়ার্ড বা OTP কখনো দেবেন না।
+    </p>
+  </section>
+</main>
+<footer>MS AURA TOP UP · Independent top-up shop</footer>
+
+<script>
+const packages = [
+  {name:"100 Diamonds",price:80},
+  {name:"210 Diamonds",price:160},
+  {name:"310 Diamonds",price:240},
+  {name:"520 Diamonds",price:400},
+  {name:"1060 Diamonds",price:800},
+  {name:"2180 Diamonds",price:1600}
+];
+
+let selected = null;
+const grid = document.getElementById("packages");
+
+packages.forEach((p,i)=>{
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <div class="diamond">💎</div>
+    <h3>${p.name}</h3>
+    <div class="price">৳${p.price}</div>
+    <button type="button">নির্বাচন করুন</button>`;
+  card.querySelector("button").onclick = ()=>{
+    selected = p;
+    document.querySelectorAll(".card").forEach(c=>
+      c.classList.remove("selected"));
+    card.classList.add("selected");
+  };
+  grid.appendChild(card);
+});
+
+document.getElementById("orderForm").onsubmit = (e)=>{
+  e.preventDefault();
+  if(!selected){
+    alert("আগে একটি Diamond Package নির্বাচন করুন।");
+    return;
+  }
+
+  const uid = document.getElementById("uid").value.trim();
+  const player = document.getElementById("player").value.trim();
+  const contact = document.getElementById("contact").value.trim();
+  const payment = document.getElementById("payment").value;
+  const trx = document.getElementById("trx").value.trim();
+
+  const orderId = "MSA-" + Date.now().toString().slice(-8);
+  const text =
+`MS AURA TOP UP - DEMO ORDER
+Order ID: ${orderId}
+Package: ${selected.name}
+Price: ৳${selected.price}
+Player UID: ${uid}
+Player Name: ${player || "Not provided"}
+Contact: ${contact}
+Payment Method: ${payment}
+Transaction ID: ${trx}
+
+Status: UNVERIFIED - PAYMENT NOT VERIFIED`;
+
+  document.getElementById("details").textContent = text;
+  document.getElementById("result").hidden = false;
+};
+
+document.getElementById("copyBtn").onclick = async ()=>{
+  const text = document.getElementById("details").textContent;
+  try{
+    await navigator.clipboard.writeText(text);
+    alert("বিবরণ কপি হয়েছে।");
+  }catch{
+    alert("কপি করা যায়নি। বিবরণটি নির্বাচন করে কপি করুন।");
+  }
+};
+</script>
+</body>
+</html>
